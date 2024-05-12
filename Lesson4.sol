@@ -16,6 +16,8 @@ contract Lesson4 {
                     if(balances[msg.sender] >= wallet){
                         Savings -= wallet;
                         balances[msg.sender] -= wallet;
+                        }else{
+                            revert("Somethings here has error");
                         }
                 }
 }
