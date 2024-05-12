@@ -24,7 +24,7 @@ Creator: Stephen David Q. Condino
 
 Email: 8215348@ntc.edu.ph
 
-Facebook: [@DavidAnciano]https://www.facebook.com/profile.php?id=100010312052822
+Facebook: [@DavidAnciano](https://www.facebook.com/profile.php?id=100010312052822)
 
 Contact Number: 09651272083
 
