@@ -6,7 +6,7 @@ contract Lesson3{
 
     event deposit(address indexed receiver, uint amount);
     event withdraw(address indexed owner, uint amount);
-    event transfer(address indexed owner, address indexed reciever, uint amount );
+    event transfer(address indexed owner, address indexed receiver, uint amount );
 
    function Deposit(address _receiver, uint _amount) external payable {
         require( _receiver != address(0) , "unable to transfer, account is not registered");
