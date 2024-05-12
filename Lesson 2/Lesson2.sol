@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-contract Metacrafter {
+contract Lesson2 {
     uint value = 5;
 
 
@@ -20,7 +20,7 @@ contract Metacrafter {
     }
 }
 
-contract DerivedContract is Metacrafter {
+contract DerivedContract is Lesson2 {
     function DerivedgetValue() public view returns(uint) {
         return getValue();
     }
