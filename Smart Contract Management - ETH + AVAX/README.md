@@ -1,5 +1,19 @@
 # ETH-AVAX-PROOF-Intermediate-EVM-Course
-Functions and Errors - ETH + AVAX | Featuring a Function and Error swhere creating a simple but useful program and be aware for an incoming error.
+Functions and Errors - ETH + AVAX | Featuring a Function and Error swhere creating a simple but useful program and be aware for an incomming error.
+Smart Contract Management - ETH + AVAX | Managing multiple Smart Contract and show how to link a Phantom Wallet to Metamask and be able to Deposit and Withdraw of Eth.
+
+
+### How to run
+Get the template here: [@Click Here](https://github.com/MetacrafterChris/SCM-Starter)
+After cloning the github, you will want to do the following to get the code running on your computer.
+
+*Inside the project directory, in the terminal type: npm i
+*Open two additional terminals in your VS code
+*In the second terminal type: npx hardhat node
+*In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
+*Back in the first terminal, type npm run dev to launch the front-end.
+
+After this, the project will be running on your localhost. Typically at http://localhost:3000/
 
 ### Executing program
 * To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
