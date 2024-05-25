@@ -4,6 +4,7 @@ Smart Contract Management - ETH + AVAX | Managing multiple Smart Contract and sh
 
 ### How to run
 Get the template here: [TEMPLATE HERE](https://github.com/MetacrafterChris/SCM-Starter)
+
 After cloning the github, you will want to do the following to get the code running on your computer.
 
 * Inside the project directory, in the terminal type: npm i
