@@ -1,5 +1,5 @@
 # ETH-AVAX-PROOF-Intermediate-EVM-Course
-Types of Functions - ETH + AVAX |
+Types of Functions - ETH + AVAX | this module talks about the interface and abstruct construct and how to diffrenciate a view and pure method and how to use fallback to handles unrecognized call in functions.
 
 ### Executing program
 * To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
