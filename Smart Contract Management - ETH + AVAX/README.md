@@ -1,6 +1,5 @@
-# ETH-AVAX-PROOF-Intermediate-EVM-Course
-Smart Contract Management - ETH + AVAX | Managing multiple Smart Contract and show how to link a Phantom Wallet to Metamask and be able to Deposit and Withdraw of Eth.
-
+# Smart Contract Management - ETH + AVAX
+Managing multiple Smart Contract and show how to link a Phantom Wallet to Metamask and be able to Deposit and Withdraw of Eth.
 
 ### How to run
 Get the template here: [TEMPLATE HERE](https://github.com/MetacrafterChris/SCM-Starter)
