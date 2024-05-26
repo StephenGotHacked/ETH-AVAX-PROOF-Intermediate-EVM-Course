@@ -1,4 +1,4 @@
-# ETypes of Functions - ETH + AVAX
+# Types of Functions - ETH + AVAX
 This module talks about the interface and abstruct construct and how to diffrenciate a view and pure method and how to use fallback to handles unrecognized call in functions.
 
 ### Executing program
