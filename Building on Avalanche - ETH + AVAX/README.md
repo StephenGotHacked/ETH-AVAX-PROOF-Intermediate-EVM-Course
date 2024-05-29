@@ -2,7 +2,7 @@
 
 Building on Avalanche - ETH + AVAX | Building a token, minting, burning, transferring and redeeming token and using a Wallet Addresses.
 
-## PLEASE USE EARPHONE WHILE WATCHING THE CODE WALK-THROUGH
+#### PLEASE USE EARPHONE WHILE WATCHING THE CODE WALK-THROUGH
 
 ### Executing program
 * To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
