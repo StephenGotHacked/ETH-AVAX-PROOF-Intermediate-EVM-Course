@@ -1,6 +1,9 @@
 # Types of Functions - ETH + AVAX
 This module talks about the interface and abstruct construct and how to diffrenciate a view and pure method and how to use fallback to handles unrecognized call in functions.
 
+### **PLEASE USE EARPHONE WHILE WATCHING THE CODE WALK-THROUGH**
+**_Module 3:_**[Types Of Functions](https://drive.google.com/file/d/1Qp7TfnUSs8e258NjTYmSrkX8y6ZvINgZ/view?usp=drive_link)
+
 ### Executing program
 * To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 * Open a Solidity file in the repository and copy the code and paste it to the IDE you use.
