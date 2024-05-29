@@ -1,6 +1,6 @@
 # ETH-AVAX-PROOF-Intermediate-EVM-Course
 
-Building on Avalanche - ETH + AVAX |
+Building on Avalanche - ETH + AVAX | Building a token, minting, burning, transferring and redeeming token and using a Wallet Addresses.
 
 
 ### Executing program
