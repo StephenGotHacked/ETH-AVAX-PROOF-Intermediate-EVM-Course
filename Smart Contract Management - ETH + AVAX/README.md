@@ -5,6 +5,7 @@ Managing multiple Smart Contract and show how to link a Phantom Wallet to Metama
 **_Module 2:_**[Smart Contract Management](https://www.loom.com/share/e170ce26af3e4156a1f0e4208e9907c1?sid=0b440ba6-5a46-4589-8715-9de7c84115a3)
 
 ### How to run
+Get the starter template for index.js: [**starter-template**](https://github.com/MetacrafterChris/SCM-Starter/tree/main)
 Get the template here: [TEMPLATE HERE](https://github.com/MetacrafterChris/SCM-Starter)
 
 After cloning the github, you will want to do the following to get the code running on your computer.
