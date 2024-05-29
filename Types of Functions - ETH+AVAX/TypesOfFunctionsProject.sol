@@ -1,35 +1,38 @@
 //SPDX-License-Identifier: MIT
-  pragma solidity ^0.8.25;
+pragma solidity ^0.8.25;
         
-contract TypesOfFcuntion{
-    
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract TypesOfFcuntion is ERC20{
+       
     address public OwnerAddress;
 
-    constructor() payable{
+    constructor() ERC20("Coindino", "COD") payable {
         OwnerAddress = msg.sender;
     }
 
-        mapping (address Address => uint SLP) AxieAccountBalance;
-        event ErrorHandling(address Address, uint SLP);
+    mapping (address account => uint amount) public CODBalance;
 
-    function SmoothLovePotionMint (address Address, uint SLPMinted)public{
-            require(Address == OwnerAddress, "Limited Access for Owner only");
+    function CoindinoMint(address account, uint CODAmount) public {
+        require(msg.sender == OwnerAddress, "Limited Access for Owner only");
 
-            AxieAccountBalance[Address] += SLPMinted;
-        }
+        _mint(account, CODAmount);
+        CODBalance[account] += CODAmount;
+    }
 
-    function SmoothLovePotionBurn (address Address, uint SLPBurned)public{
-            require(AxieAccountBalance[Address] >= SLPBurned, "Not enough Stored SLP");
+    function CoindinoBurn(address account, uint CODAmount) public {
+        require(CODBalance[account] >= CODAmount, "Not enough Stored Coindino(COD)");
 
-            AxieAccountBalance[Address] -= SLPBurned;
-        }
+        _burn(account, CODAmount);
+        CODBalance[account] -= CODAmount;
+    }
 
-    function SmoothLovePotionTransfer (address Sender, address Receiver, uint SLPTransfer)public{
-            require(AxieAccountBalance[Sender] >= SLPTransfer, "Not enough Stored SLP");
-            
-            AxieAccountBalance[Sender] -= SLPTransfer;
-            AxieAccountBalance[Receiver] += SLPTransfer;
+    function CoindinoTransfer(address sender, address recipient, uint CODAmount) public {
+        require(CODBalance[sender] >= CODAmount, "Not enough Stored Coindino(COD)");
+        _approve(sender, recipient, CODAmount);
+        _transfer(sender, recipient, CODAmount);
 
-            emit ErrorHandling(Receiver, SLPTransfer);
-        }
+        CODBalance[sender] -= CODAmount;
+        CODBalance[recipient] += CODAmount;
+    }
 }
