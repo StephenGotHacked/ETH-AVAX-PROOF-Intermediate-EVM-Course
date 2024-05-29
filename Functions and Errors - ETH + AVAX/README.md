@@ -2,8 +2,7 @@
 Featuring a Function and Error swhere creating a simple but useful program and be aware for an incoming error.
 
 ### **PLEASE USE EARPHONE WHILE WATCHING THE CODE WALK-THROUGH**
-**_Module 1_**
-[Function And Error](https://www.loom.com/share/383031aab38f40129c96f273ab10a64e?sid=ec5e8ee8-75c5-4e7c-b55d-7757f32c0ddc)
+**_Module 1:_** [Function And Error](https://www.loom.com/share/383031aab38f40129c96f273ab10a64e?sid=ec5e8ee8-75c5-4e7c-b55d-7757f32c0ddc)
 
 ### Executing program
 * To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
