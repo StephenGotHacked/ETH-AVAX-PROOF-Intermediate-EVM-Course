@@ -24,11 +24,11 @@ contract Assessment is ERC20 {
 
     function DEGENRedeem(address Wallet, string memory DGNitem, uint DGNvalue) public payable{
         if(keccak256(abi.encodePacked(AvailableDegenItem[0])) == keccak256(abi.encodePacked(DGNitem))){
-            
-            require(DEGENBalance[Wallet] >= 1000, "You dont have enough Degen");
-            require(DGNvalue != 0, "You can't redeem a 0 value!");
 
             uint total = 1000 * DGNvalue; 
+
+            require(DEGENBalance[Wallet] >= total, "You dont have enough Degen");
+            require(DGNvalue != 0, "You can't redeem a 0 value!");
 
             require(AvailableDegenItemStock[0] >= total, "Not enough gold available, restock soon.");
 
@@ -38,10 +38,11 @@ contract Assessment is ERC20 {
 
         }else if(keccak256(abi.encodePacked(AvailableDegenItem[1])) == keccak256(abi.encodePacked(DGNitem))){
             
-            require(DEGENBalance[Wallet] >= 500, "You dont have enough Degen");
+            uint total = 500 * DGNvalue;
+
+            require(DEGENBalance[Wallet] >= total, "You dont have enough Degen");
             require(DGNvalue != 0, "You can't redeem a 0 value!");
 
-            uint total = 500 * DGNvalue;
 
             require(AvailableDegenItemStock[1] >= total, "Not enough silver available, restock soon.");
 
@@ -51,10 +52,11 @@ contract Assessment is ERC20 {
 
         }else if(keccak256(abi.encodePacked(AvailableDegenItem[2])) == keccak256(abi.encodePacked(DGNitem))){
             
-            require(DEGENBalance[Wallet] >= 250, "You dont have enough Degen");
+            uint total = 250 * DGNvalue;
+
+            require(DEGENBalance[Wallet] >= total, "You dont have enough Degen");
             require(DGNvalue != 0, "You can't redeem a 0 value!");
 
-            uint total = 250 * DGNvalue;
 
             require(AvailableDegenItemStock[2] >= total, "Not enough bronze available, restock soon.");
 
@@ -68,7 +70,7 @@ contract Assessment is ERC20 {
     }
 
     function DEGENMint(address wallet, uint DGN) public {
-        require(wallet == OwnerAddress, "Limited Access for Owner only");
+        require(msg.sender == OwnerAddress, "Limited Access for Owner only");
 
         _mint(wallet, DGN);
         DEGENBalance[wallet] += DGN;
