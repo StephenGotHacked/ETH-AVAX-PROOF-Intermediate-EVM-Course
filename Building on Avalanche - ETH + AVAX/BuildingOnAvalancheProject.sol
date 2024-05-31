@@ -16,39 +16,42 @@ contract Assessment is ERC20 {
     }
 
     mapping (address WalletAddress => uint DGN) public DEGENBalance;
+    mapping(address WalletAddress => mapping(string StoredItemName => uint256 StoredItemAmount)) public DEGENItemBag;
 
     function AvailableItems() public view returns (string[] memory Item, uint[] memory Stock, uint[] memory Price) {
         return (AvailableDegenItem, AvailableDegenItemStock, DegenItemPrice);
     }
 
-    function DEGENRedeem(address Wallet, uint Budget, string memory DGNitem, uint DGNvalue) public payable{
+    function DEGENRedeem(address Wallet, string memory DGNitem, uint DGNvalue) public payable{
         if(keccak256(abi.encodePacked(AvailableDegenItem[0])) == keccak256(abi.encodePacked(DGNitem))){
             
-            require(DEGENBalance[Wallet] >= Budget, "You dont have enough Degen");
+            require(DEGENBalance[Wallet] >= 1000, "You dont have enough Degen");
             require(DGNvalue != 0, "You can't redeem a 0 value!");
 
-            uint total = 1000 * DGNvalue;
+            uint total = 1000 * DGNvalue; 
 
             require(AvailableDegenItemStock[0] >= total, "Not enough gold available, restock soon.");
 
             DEGENBalance[Wallet] -= total;
             AvailableDegenItemStock[0] -= DGNvalue;
+            DEGENItemBag[Wallet][DGNitem] += DGNvalue;
 
         }else if(keccak256(abi.encodePacked(AvailableDegenItem[1])) == keccak256(abi.encodePacked(DGNitem))){
             
-            require(DEGENBalance[Wallet] >= Budget, "You dont have enough Degen");
+            require(DEGENBalance[Wallet] >= 500, "You dont have enough Degen");
             require(DGNvalue != 0, "You can't redeem a 0 value!");
 
             uint total = 500 * DGNvalue;
 
             require(AvailableDegenItemStock[1] >= total, "Not enough silver available, restock soon.");
 
-            Budget -= total;
+            DEGENBalance[Wallet] -= total;
             AvailableDegenItemStock[1] -= DGNvalue;
+            DEGENItemBag[Wallet][DGNitem] += DGNvalue;
 
         }else if(keccak256(abi.encodePacked(AvailableDegenItem[2])) == keccak256(abi.encodePacked(DGNitem))){
             
-            require(DEGENBalance[Wallet] >= Budget, "You dont have enough Degen");
+            require(DEGENBalance[Wallet] >= 250, "You dont have enough Degen");
             require(DGNvalue != 0, "You can't redeem a 0 value!");
 
             uint total = 250 * DGNvalue;
@@ -57,6 +60,7 @@ contract Assessment is ERC20 {
 
             DEGENBalance[Wallet] -= total;
             AvailableDegenItemStock[2] -= DGNvalue;
+            DEGENItemBag[Wallet][DGNitem] += DGNvalue;
 
         }else{
             revert("Item not found, check your capitalization/spell!");
