@@ -68,7 +68,7 @@ contract Assessment is ERC20 {
     }
 
     function DEGENMint(address wallet, uint DGN) public {
-        require(msg.sender == OwnerAddress, "Limited Access for Owner only");
+        require(wallet == OwnerAddress, "Limited Access for Owner only");
 
         _mint(wallet, DGN);
         DEGENBalance[wallet] += DGN;
