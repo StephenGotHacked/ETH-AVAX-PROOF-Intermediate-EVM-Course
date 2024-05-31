@@ -4,7 +4,7 @@ Building on Avalanche - ETH + AVAX | Building a token, minting, burning, transfe
 
 ### **PLEASE USE EARPHONE WHILE WATCHING THE CODE WALK-THROUGH**
 
-[Building On Avalance](https://drive.google.com/file/d/16xQfalCJiC0vtXkwxXXlPJRDEJhWU05h/view?usp=drive_link)
+[Building On Avalance](https://drive.google.com/file/d/1eUE3TlvFb17rukzbbBqNv8HC6qSMDEzR/view?usp=sharing)
 
 ### Executing program
 * To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
